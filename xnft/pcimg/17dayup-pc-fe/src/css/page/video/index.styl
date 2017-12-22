@@ -1,0 +1,232 @@
+@import '../../config.styl'
+
+html, body, #content
+    height 100%
+    width 100%
+    overflow hidden
+body
+    background #000
+.topbar
+    height 60px
+    line-height 60px
+    background #161616
+    color #999
+    font-size 16px
+    .back
+        font-size 30px
+        margin 0 50px 0 24px
+    .course-title
+        display inline-block
+        vertical-align middle
+    .user-info
+        position relative
+    .user-center
+        float right
+        .ucenter-dropdown-menu
+            position absolute
+            display none
+            top 100%
+            right 0
+            text-align center
+            list-style none
+            min-width 0
+            background #fff
+            border-radius 0
+            z-index 1
+            padding 0
+            margin 0
+        .ucenter-dropdown-menu li
+            height 32px
+            line-height 32px
+            text-align left
+            margin 0
+            padding 0
+            &:hover
+                background $color_primary
+                a
+                    color #fff
+            a
+                padding 3px 20px
+                font-size 14px
+
+        &:hover .ucenter-dropdown-menu
+            display block
+    .login-wrap
+        margin-right 24px
+        .login
+        .register
+            cursor pointer
+        .padding
+            padding 0 5px
+
+    .notice
+        position relative
+        font-size 30px
+        margin-left 30px
+        &:hover
+            color $color_primary
+        .num
+            position absolute
+            min-width 16px
+            height 16px
+            padding 0 3px
+            text-align center
+            line-height 16px
+            background $color_red
+            color #fff
+            font-size 12px
+            top 8px
+            right -8px
+            border-radius 50%
+            display none
+    .avatar
+        display inline-block
+        font-size 24px
+        margin 0 25px 0 0
+        background #d6d6d6
+        color #fff
+        height 32px
+        width 32px
+        line-height 32px
+        text-align center
+        border-radius 50%
+        img
+            width 40px
+            height 40px
+            vertical-align middle
+            border-radius 50%
+
+    .m-r-60
+        margin-right 56px
+
+.course-catalog
+    position absolute
+    top 60px
+    bottom 0
+    right 0
+    color #fff
+    font-size 14px
+    z-index 1
+    line-height 30px
+    background #000
+    padding-top 20px
+
+    .chapter-wrap
+        height 100%
+        width 0
+        left 0
+        top 0
+        overflow-y auto
+        transition width .4s ease-in-out
+        &.expand
+            width 300px
+
+    .catalog-btn
+        position absolute
+        top 50%
+        left -55px
+        margin-top -105px
+        width 55px
+        height 90px
+        text-align center
+        background $color_primary
+        color #fff
+        border-radius 4px 0 0 4px
+        cursor pointer
+    .chapter-list
+        padding 0 8px 0 24px
+
+    .chapter-item
+        cursor pointer
+        padding-left 24px
+        &.active
+            color $color_primary
+
+.no-sign-tip
+    position absolute
+    top 60px
+    left 50%
+    margin-left -160px
+    width 320px
+    border-radius 4px
+    background #fff
+    display table
+    font-size 16px
+    line-height 20px
+    padding 10px 10px 10px 20px
+    z-index 2
+    .btn
+        display inline-block
+        text-align center
+        width 100px
+        height 40px
+        line-height 40px
+        background #268fff
+        color #fff
+        border-radius 4px
+    .close-btn
+        cursor pointer
+        font-size 18px
+        padding 3px 8px
+
+.pay-tip
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    color #fff
+    z-index 1
+    display none
+    text-align center
+    .title
+        font-size 30px
+        font-weight bold
+        margin-bottom 38px
+    .course-name
+        font-size 30px
+        margin-bottom 38px
+    .price
+        font-size 24px
+        color $color_red
+        margin-bottom 38px
+    .w-btn-primary
+        display inline-block
+        width 150px
+        height 60px
+        line-height 60px
+        padding 0
+        font-size 24px
+        text-align center
+        box-shadow 3px 3px 8px rgba(0,0,0,.3)
+
+#player
+    position absolute
+    top 60px
+    bottom 0
+    width 100%
+    .jw-controlbar
+        height 60px
+        font-size 16px
+    .jw-buffer
+        background #999
+    .jw-icon-barlogo-new
+        display none
+    .jw-option
+        height 30px
+        line-height 30px
+
+    .jw-playrate-label
+    .jw-hd-label
+        background #333333
+        color #999
+        height 30px
+        line-height 30px
+        margin-top 0
+        vertical-align middle
+    .jw-progress
+    .jw-icon-tooltip .jw-active-option
+        background $color_primary
+    .jw-button-color:hover
+    .jw-toggle
+        color $color_primary
+

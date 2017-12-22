@@ -1,0 +1,48 @@
+@import "./center.styl"
+.clearfix:before, .clearfix:after
+    display table
+    content " "
+.clearfix:after
+    clear both
+.user-coupon
+    .coupon-title
+        padding 10px 30px
+        border-bottom 1px solid #dedede
+        h3
+            font-size 14px
+    .coupon-main
+        padding 30px
+        margin 0 auto
+        .item-bg
+            float left
+            margin 0px 5px 20px 5px
+            background url(/build/img/center/coupon.png)
+            display inline-block
+            width 300px
+            height 100px
+            background-size 300px 100px
+            background-repeat no-repeat
+            .coupon_head
+                color #FF6D00
+                width 125px
+                height 100px
+                line-height 100px
+                font-size 48px
+                background url("/build/img/center/money-unit.png") no-repeat 20px center
+                padding-left 35px
+            .rule_content
+                width 175px
+                padding-top 25px
+                font-size 12px
+                color #999
+                padding-right 9px
+                .coupon_date
+                    margin 10px 0
+                .userarea
+                    overflow hidden
+                    /*white-space nowrap*/
+                    /*text-overflow ellipsis*/
+                    padding-right 10px
+                    background url(/build/img/center/coupon-triangle.png) no-repeat 142px 4px
+                    height 1.2em
+
