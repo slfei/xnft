@@ -1,0 +1,93 @@
+/**
+  margin: 0
+  padding: 0
+
+a
+  text-decoration: none*/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.content .cont{
+	background-position: top center;
+	background-repeat: no-repeat;
+	max-width:1920px;
+
+}
+
+.box{
+		width: 67.1875%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -33.59%;
+    bottom: 0
+}
+
+
+/*.h{
+	height:900px;
+}*/
+.content .page_one{
+	height:875px;
+	background:url("./pcAppload/bg1.jpg") no-repeat center;
+	background-size: 1920px 875px;
+	background-position: center;	
+	overflow:hidden;
+}
+
+.content .page_seven{
+	color: #FFFFFF;
+  background: url("./pcAppload/bg7.jpg");
+	background-size:100%;
+	overflow:hidden;
+	padding-bottom: 46.875%;
+	position: relative;	
+}
+
+.content .page_seven .left{
+	width: 45.5%;
+  margin-top:10.2325%;
+}
+.content .page_seven .right{
+	width:30%;
+  margin-top:30.62%;
+	float:right;
+}
+.content .page_seven .right h3{
+	font-size: 4%;
+	margin-bottom: 30px;
+	
+}
+.content .page_seven .right p{
+	font-size:26px;
+	line-height:1.5;
+	
+}
+
+ /*@media screen and (min-width: 1201px) and (max-width: 1680px) {
+	
+ 	.content .page_seven .right h3{
+		font-size:26px;
+ 	}
+ 	.content .page_seven .right p{
+ 		font-size:13px;
+		line-height:1.5;
+ 	}
+	.content .page_seven .right{
+	    width: 32%;
+     }
+ }
+ @media screen and (max-width: 1200px) {
+ 	.content .page_seven .right h3{
+	    font-size: 26px;
+	}
+	.content .page_seven .right p{
+ 		font-size:13px;
+ 		line-height:1.5;	
+ 	}
+	.content .page_seven .right{
+	    width: 32%;
+     }
+ }*/
