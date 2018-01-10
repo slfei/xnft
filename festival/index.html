@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="/staticimg/icon.ico" type="image/x-icon">    
+    <title>伟东云学堂-带梦想远航</title>
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <script>
+        (function () {
+            function isWeiXin(){
+                var ua = window.navigator.userAgent.toLowerCase();
+                return /micromessenger/.test(ua);
+            }
+
+            if(isWeiXin()){
+                document.documentElement.classList.add('is-wechat');
+                window.isWechat = true;
+            }else{
+                window.isWechat = false;
+            }
+        })();
+    </script>
+</head>
+<body>
+    <div class="wraper" style="display: none">
+        <div class="wechat-share">
+            <img src="img/wechat-share.png" alt="">
+        </div>
+        <div class="has-prize">
+           
+            <div class="prize-desc">
+                
+                <!-- 奖品 手表-->
+                <div style="display: none" class="prize-watch">
+                    <div class="close">
+                        <img src="img/close.png" alt="">
+                    </div>
+                    <div class="prize-top">
+                        <img src="img/goodluck.png" alt="" class="headpart">
+                        <div class="title">恭喜您</div>
+                    </div>
+                    <div class="name-desc">抽中炫酷手表一个！</div>
+                    
+                    <div class="address-save" >
+                        <div class="notice">
+                            <p>伟东云学堂工作人员将于活动结束后</p>
+                            <p>7个工作日内电话联系您！请您保持手机畅通！</p>
+                        </div>   
+                        <div data-toggle="distpicker" class="place"><!-- container -->
+                            <select data-province="省" class="select-control province"></select><!-- province -->
+                            <select data-city="市" class="select-control city"></select><!-- city -->
+                            <select data-district="区" class="select-control district"></select><!-- district -->
+                        </div>  
+                        <div><input type="text" class="place-input" placeholder="请输入详细地址，具体到门牌号"></div>          
+                        <div class="save-address js-save-addressed">保存</div>
+                    </div>
+                    <div class="address-complete" style="display:none"> 
+                        <p>收货地址</p>
+                        <p class="address-show js-addressed-show"></p>
+                        <div class="sharebtn">立即分享</div>
+                    </div>
+                </div>
+                <!-- 奖品 红包-->
+                <div style="display: none" class="prize-money">
+                    <div class="close">
+                        <img src="img/close.png" alt="">
+                    </div>
+                    <div class="prize-top">
+                        <img src="img/goodluck.png" alt="" class="headpart">
+                        <div class="title">恭喜您</div>
+                    </div>
+                    <div class="name-desc"><span class="icon-packet"></span>抽中<span id="js-money-desc"></span></div>
+                    <div class="notice">
+                       <p>关注“伟东云学堂”领取现金到微信红包</p>
+                    </div>                
+                    <div class="sharebtn">立即分享</div> 
+                </div>
+                <!-- 奖品 优惠券-->
+                <div style="display: none" class="prize-discont">
+                    <div class="close">
+                        <img src="img/close.png" alt="">
+                    </div>
+                    <div class="prize-top">
+                        <img src="img/goodluck.png" alt="" class="headpart">
+                        <div class="title">恭喜您</div>
+                    </div>
+                    <div class="name-desc">抽中伟东云学堂课程优惠券</div>
+                    <div class="notice">
+                       <p>课程券已直接充入 <span></span>账户</p>
+                    </div>
+                    <div class="btn-group">
+                        <a class="usebtn" href="http://www.wdyedu.com/center">立即使用</a>
+                        <div class="sharebtn">立即分享</div> 
+                    </div>                
+                    
+                </div>
+                <!-- 输入手机号 -->   
+                <div class="login" style="display: none">
+                    <div class="close">
+                        <img src="img/close.png" alt="">
+                    </div>
+                    <p>此手机号做为领取奖品使用哦~</p>
+                    <div class="row">
+                        <input type="text" class="input phone-number" placeholder="请输入手机号"><span class="input-btn js-get-captcha">获取验证码</span>
+                    </div>
+                    <div class="row">
+                        <input type="text" class="input captcha" placeholder="请输入验证码"><span class="input-btn gologin">确定</span>
+                    </div>
+                </div>
+                <!-- 活动结束 -->
+                <div class="activity-end js-activity-end" style="display: none">
+                    <div class="word-top">本次抽奖活动已结束</div>
+                    <img src="img/ewm.png" alt="">
+                    <div class="notice">
+                       <p>更多优惠信息请关注“伟东云学堂”公众号</p>
+                    </div>
+                </div> 
+                <!--机会用完-->
+                <div class="no-chance" style="display: none">
+                    <div class="close">
+                        <img src="img/close.png" alt="">
+                    </div>
+                    <div class="word-top">今日抽奖机会已用完，明天再来吧~</div>
+                    <img src="img/ewm.png" alt="">
+                    <div class="notice">
+                       <p>关注公众号随时了解活动动态，每天奖品发不停</p>
+                    </div>
+                </div> 
+                <!-- 非微信 -->
+                <div class="no-wechat" style="display: none">
+                    <div class="close">
+                        <img src="img/close.png" alt="">
+                    </div>
+                    <div class="word-top">
+                        <p>建议使用微信打开页面</p>
+                        <p>否则抽中现金红包无法领取哦~</p>
+                    </div>
+                </div>
+                <!-- 转发朋友圈 -->
+                <div class="get-chance" style="display: none">
+                    <div class="word-top">分享至微信好友或朋友圈再抽一次！
+                        <p style="font-size: 12px;">抽中现金红包概率更大哟~</p>
+                    </div>                    
+                    <img src="img/mascot.png" alt="">
+                    <div class="sharebtn" style="margin-top:10px">立即分享</div> 
+                </div>                
+            </div>           
+        </div>
+    </div>
+    <div class="message" style="display:none"></div>
+    <div class="no-server-number js-serverpart">
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+            <div class="logo-words">
+                <span class="name">伟东云学堂</span>
+                <span class="addesc">伟东云学堂&nbsp;&nbsp;带梦想远航</span>
+            </div>
+        </div>
+        <div class="operate">
+            <!-- <a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzU5OTI2NDI2MA==&scene=110#wechat_redirect" class="joinbtn">关注</a> -->
+           <div class="joinbtn">关注</div>
+            <span class="close-goserver js-close-goserver"></span>
+        </div>
+    </div>
+    <div class="content">
+        <div class="head">
+            <img src="img/head.png" alt="">
+            <div class="prize-tip">
+                <img src="img/prize-tip.png" alt="" class="">
+            </div>           
+        </div>
+        
+       <div class="turntable_part">
+           <img src="img/shadow.png" alt="" class="shadow">
+      
+           <div class="turntable_static">
+                <img src="img/turntable_bg.png" alt="">
+                <div class="rotate">
+                    <img src="img/prizes.png" alt="">
+                </div>
+                <div class="pointer-bottom"></div>
+                <div class="point"></div>
+                <div class="pointer-words">
+                    <div class="words-top waiting">
+                        <span>点击</span>
+                        <span>开始</span>
+                    </div>
+                    <div class="words-times js-words-times">剩余<span id="js-times">1</span>次</div>
+                </div>
+           </div>
+           <div class="pointer">
+                <img src="img/pointer.png" alt="">
+            </div>
+           
+        </div>
+       <div class="lottery_list">
+        <img src="img/notice.png" alt="">
+        <div class="list">
+        <i class="icon-trumpet"></i>
+        <div class="words">
+            <ul class="goTop">
+            </ul>
+        </div>
+        </div>
+       </div>
+       <!-- 规则 -->
+       <div class="rules">
+            <ul class="tab" id="tab">
+                <span class="back-cover top"></span>
+                <span class="back-cover bottom"></span>
+                <li class="active rule" data-index="1">
+                    <i class="icon icon-rule"></i><span>活动规则</span>
+                </li>
+                <li class="prize" data-index="2">
+                    <i class="icon icon-prize"></i><span>我的奖品</span>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div id="content1" class="tab-inner">
+                    <dl class="rule">
+                        <dt class="rule-logo"></dt>
+                        <dd class="rule-words">活动时间：2018.02.16~03.15</dd>
+                    </dl>
+                    <dl class="rule">
+                        <dt class="rule-logo"></dt>
+                        <dd class="rule-words">活动介绍：活动期间，每位用户每天有2次抽奖机会，初始有1次免费抽奖机会，每天将活动转发给群里的小伙伴或朋友圈里的朋友，可额外获得1次抽奖机会。抽奖机会当天有效，即2018年3月16日00:00:00前有效。</dd>
+                    </dl>
+                    <dl class="rule">
+                        <dt class="rule-logo"></dt>
+                        <dd class="rule-words">
+                            奖品领取：
+                            <p>·抽奖获得伟东云学堂课程优惠券：将直接充入用户账户-个人中心，购买课程时直接抵现。</p>
+                            <p>·抽奖获得实物奖品：工作人员将于活动结束后7个工作日内电话联系获奖用户，请保持手机畅通。</p>        
+                            <p>·抽奖获得现金红包：需前往微信公众号“伟东云学堂”领取，现金红包将发放至微信钱包。</p>        
+                        </dd>
+                    </dl>
+                    <p>伟东云学堂保留法律范围内允许的对活动的解释权。</p>
+                </div>
+                <div id="content2" class="tab-inner" style="display: none">
+                    <div class="no-prize" style="display: none">
+                        <p>还没有抽中奖品哦~</p>
+                        <p>你手气这么好，快快去抽奖！</p>
+                        <img src="img/no-prize.png" alt="">
+                    </div>
+                    <ul class="prize-list"></ul>
+                     </div>
+                </div>
+            </div>
+       </div>
+    </div>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>   
+    <script src="lib/jquery/dist/jquery.js"></script>   
+    <script src="lib/distpicker/dist/distpicker.js"></script>  
+    <script src="js/utils.js"></script>  
+    <script src="js/main.js"></script>
+    <!-- 加统计么？ -->
+    
+
+    
+    
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?ef234da3b182c8da113d71fb947085ce";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</body>
+</html>
+
